@@ -12,7 +12,7 @@ LFLAGS   = -W -Wall -I. -I$(INCDIR) -lm
 
 all: $(BINDIR)/matrice
 
-$(BINDIR)/matrice: $(OBJDIR)/Main.o
+$(BINDIR)/matrice: $(OBJDIR)/main.o $(OBJDIR)/Matrice.o
 	$(CC) $(LFLAGS) $^ -o $@
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
